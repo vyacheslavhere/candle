@@ -8,12 +8,10 @@ import (
 
 // Checks colors are enabled
 func СolorsEnabled() bool {
-	// 1. Стандарт NO_COLOR
 	if _, ok := os.LookupEnv("NO_COLOR"); ok {
 		return false
 	}
 
-	// 2. stdout должен быть терминалом
 	return term.IsTerminal(int(os.Stdout.Fd()))
 }
 
