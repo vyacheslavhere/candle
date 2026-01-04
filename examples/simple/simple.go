@@ -6,14 +6,14 @@ import (
 )
 
 func main() {
-	error := c.NewError("Error occured").
+	error := c.NewError("Error occurred").
 		WithDiagnostic(c.NewDiagnostic(
-			"C:\\BecomingGopher\\Candle\\examples\\simple\\test.err",
+			"./test.err",
 			c.NewLocation(0, 7, 28),
 			"Сould not concatenate `str` and `int`.",
 		)).
 		WithDiagnostic(c.NewDiagnostic(
-			"C:\\BecomingGopher\\Candle\\examples\\simple\\test.err",
+			"./test.err",
 			c.NewLocation(1, 5, 10),
 			"Invalid function name.",
 		))

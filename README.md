@@ -22,7 +22,7 @@ import (
 )
 
 func main() {
-	error := c.NewError("Error occured").
+	error := c.NewError("Error occurred").
 		WithDiagnostic(c.NewDiagnostic(
 			"./test.err",
 			c.NewLocation(0, 7, 28),
