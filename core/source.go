@@ -34,5 +34,10 @@ func ReadSource(path string, location Location, style *Style) (string, string) {
 		}
 	}
 
+	if err := scanner.Err(); err != nil {
+		fmt.Println(NewError(fmt.Sprintf("Error reading source code file: %s", path)).Error(style))
+		os.Exit(1)
+	}
+
 	return fileName, scanner.Text()
 }
