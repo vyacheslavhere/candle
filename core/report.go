@@ -14,7 +14,7 @@ func ReportDiagnostics(sb *strings.Builder, err *Error, style *Style) *strings.B
 	}
 
 	for _, diagnostic := range err.Diagnostics {
-		file, line := ReadSource(diagnostic.Source, diagnostic.Location, style)
+		file, line := ReadSourceDiagnostic(diagnostic, style)
 
 		sb.WriteString("\n")
 
